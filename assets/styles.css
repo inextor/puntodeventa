@@ -1,0 +1,45 @@
+.main_header
+{
+	position: sticky;
+	top: 0;
+	height: 50px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 5px 0 rgba(0,0,0,.23);
+	width: 100%;
+	background-color: white;
+}
+
+@media screen
+{
+	body
+	{
+		margin: 0 0 0 0;
+	}
+}
+
+h2[data-intersect=""]
+{
+	color: rgba(0,0,0,0);
+	text-shadow: 0 0 10px #000;
+}
+h2[data-intersect="visible"]
+{
+	color: rgba(0,0,0,0.0);
+    text-shadow: 0 0 0px #000;
+	transition: text-shadow 0.5s;
+}
+
+[data-intersect=""]
+{
+	/*
+	opacity: 0.5;
+	transform: translateX(-30px );
+	*/
+}
+[data-intersect="visible"]
+{
+	/*
+	transform: translateX( 0 );
+	opacity: 1;
+	transition: opacity 0.5s, transform 0.5s;
+	*/
+}

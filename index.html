@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+	<head>
+		<link rel="stylesheet"  href="assets/styles.css">
+	</head>
+	<body>
+		<header class="main_header">Punto de venta</header>
+		<main> Hello world<br/>
+			<h2 data-intersect="">BLUR MTF</h2>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			<div data-intersect="">Hello</div>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			Hello world<br/>
+			<div data-intersect="">FOOO</div>
+			Hello world<br/>
+			Hello world<br/>
+		</main>
+
+	</body>
+	<script>
+	//https://www.youtube.com/watch?v=_jauXV4oHqU
+
+	//IntersectionObserverEntry,IntersectionObserver
+	function observe(entries,intersetionObserver)
+	{
+		console.log( entries, intersectionObserver );
+		for(let entry of entries)
+		{
+			if( entry.isIntersecting  )
+			{
+				entry.target.setAttribute('data-intersect','visible');
+			}
+			else
+			{
+				entry.target.setAttribute('data-intersect','');
+			}
+		}
+	}
+
+	let elements = [ ...document.querySelectorAll('[data-intersect]')];
+
+	const intersectionObserver = new IntersectionObserver(observe,{
+		threshold: 0.5
+	})
+
+	for(obj of elements)
+	{
+		intersectionObserver.observe(obj);
+	}
+</script>
+</html>
